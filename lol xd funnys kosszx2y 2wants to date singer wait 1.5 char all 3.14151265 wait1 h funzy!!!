@@ -1,6 +1,13 @@
 local RunService = game:GetService("RunService")
 local v222 = Instance.new("Model", workspace)
-   
+       local function SetCFrame(Part, CFrame)
+        if (Part and Part.ReceiveAge == 0) then
+			task.spawn(function()
+            Part.CFrame = CFrame
+			end)
+        end
+    end
+
    local ass1 = Instance.new("Part", v222)
    ass1.Name = "ass1"
    ass1.CanCollide = false
