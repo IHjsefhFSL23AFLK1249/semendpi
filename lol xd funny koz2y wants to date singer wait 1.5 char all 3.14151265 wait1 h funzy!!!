@@ -1,4 +1,4 @@
-
+local RunService = game:GetService("RunService")
     wait(.8)
 local v222 = Instance.new("Model", workspace)
 
