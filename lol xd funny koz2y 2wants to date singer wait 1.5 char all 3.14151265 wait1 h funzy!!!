@@ -20,6 +20,14 @@ local skibdiboo = {
   boob1 = NewPart(Vector3.new(2,2,2), "boob1"),
   boob2 = NewPart(Vector3.new(2,2,2), "boob2")
 }
+    local function SetCFrame(Part, CFrame)
+task.spawn(function()
+        if (Part and Part.ReceiveAge == 0) then
+            Part.CFrame = CFrame
+			
+        end
+end)
+    end
 table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
 	for Name, Child in pairs(skibdiboo) do
 		task.spawn(function()
