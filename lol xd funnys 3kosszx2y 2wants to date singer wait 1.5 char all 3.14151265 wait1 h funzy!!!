@@ -36,7 +36,7 @@ local v222 = Instance.new("Model", workspace)
    }
    local skibdiboo = {
      ass1 = NewPart(Vector3.new(2,2,2), "ass1", nil, Color3.new(223,199,167)),
-     ass1 = NewPart(Vector3.new(2,2,2), "ass2", nil, Color3.new(223,199,167)),
+     ass2 = NewPart(Vector3.new(2,2,2), "ass2", nil, Color3.new(223,199,167)),
           boob = NewPart(Vector3.new(1.21,1.21,1.21), "boob", nil, Color3.new(223,199,167)),
      boob2 = NewPart(Vector3.new(1.21,1.21,1.21), "boob2", nil, Color3.new(223,199,167))
    }
