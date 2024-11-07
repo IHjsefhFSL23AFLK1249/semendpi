@@ -25,21 +25,25 @@ g3.CanCollide = false
 g3.Size = Vector3.new(0.9,1,7)
 local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z - (g3.Size.Z + g3.Size.Z/2)))
 g3.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset3 * CFrame.new(0,-0.5,0)
-  local skibdiboo = {
+print(getgenv().ReanimSizeLol)
+   print("Yo")
+     local skibdiboo = {
      g = NewPart(Vector3.new(1,1,1), "g", nil, Color3.new(223,199,167)),
      g2 = NewPart(Vector3.new(1,1,1), "g2", nil, Color3.new(223,199,167)),
-          g3 = NewPart(Vector3.new(getgenv().ReanimSizeLol), "g3", nil, Color3.new(223,199,167))
+          g3 = NewPart(getgenv().ReanimSizeLol, "g3", nil, Color3.new(223,199,167))
    }
-   table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
+RunService.Heartbeat:connect(function()
       for Name, Child in pairs(skibdiboo) do
          task.spawn(function()
-if Name == "g" then
-              g.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset * CFrame.new(0,-0.5,0)
-            elseif Name == "g2" then
-              g2.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset2 * CFrame.new(0,-0.5,0)
-            elseif Name == "g3" then
-              g3.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset3 * CFrame.new(0,-0.5,0)
+if Child == "g" then
+              SetCFrame(Child, (game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset * CFrame.new(0,-0.5,0)))
+            elseif Child == "g2" then
+              SetCFrame(Child, (game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset2 * CFrame.new(0,-0.5,0)))
+            elseif Child == "g3" then
+               SetCFrame(Child, (game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset3 * CFrame.new(0,-0.5,0)))
             end
       end)
       end
-   end))
+   end)
+
+   print("A")
