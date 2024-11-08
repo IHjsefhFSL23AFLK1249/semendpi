@@ -2,9 +2,9 @@ local RunService = game:GetService("RunService")
 local v222 = Instance.new("Model", workspace)
        local function SetCFrame(Part, CFrame)
         if (Part and Part.ReceiveAge == 0) then
-			task.spawn(function()
+            task.spawn(function()
             Part.CFrame = CFrame
-			end)
+            end)
         end
     end
 local g = Instance.new("Part",v222)
@@ -48,13 +48,18 @@ g3.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset3 * C
          end))
 print(getgenv().ReanimSizeLol)
    print("Yo")
+   local Sizes = {
+    g = Vector3.new(1,1,1)
+    g2 = Vector3.new(1,1,1)
+    g3 = getgenv().ReanimSizeLol
+   }
      local skibdiboo = {
      g = NewPart(Vector3.new(1,1,1), "g", nil, Color3.new(223,199,167)),
      g2 = NewPart(Vector3.new(1,1,1), "g2", nil, Color3.new(223,199,167)),
           g3 = NewPart(getgenv().ReanimSizeLol, "g3", nil, Color3.new(223,199,167))
    }
    table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
-			 task.spawn(function()
+             task.spawn(function()
     for Name, Child in pairs(skibdiboo) do
         if (not Fixing[Name]) then
             Fixing[Name] = os.clock()
