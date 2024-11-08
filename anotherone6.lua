@@ -49,8 +49,8 @@ g3.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * GripPosOffset3 * C
 print(getgenv().ReanimSizeLol)
    print("Yo")
    local Sizes = {
-    g = Vector3.new(1,1,1)
-    g2 = Vector3.new(1,1,1)
+    g = Vector3.new(1,1,1),
+    g2 = Vector3.new(1,1,1),
     g3 = getgenv().ReanimSizeLol
    }
      local skibdiboo = {
