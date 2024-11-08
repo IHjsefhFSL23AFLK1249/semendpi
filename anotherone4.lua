@@ -54,6 +54,25 @@ print(getgenv().ReanimSizeLol)
           g3 = NewPart(getgenv().ReanimSizeLol, "g3", nil, Color3.new(223,199,167))
    }
    table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
+			 task.spawn(function()
+    for Name, Child in pairs(skibdiboo) do
+        if (not Fixing[Name]) then
+            Fixing[Name] = os.clock()
+            print('aaa')
+        end
+
+        if (Child.ReceiveAge > 0 or Child.Parent == nil) then
+            print('yooo')
+            if (os.clock() - Fixing[Name] <= 0.5) then
+                continue
+            end
+            Fixing[Name] = os.clock()
+
+            skibdiboo[Name] = NewPart(Sizes[Name], Name)
+            print('aaa')
+        end
+end
+end)
       for Name, Child in pairs(skibdiboo) do
          task.spawn(function()
          local RealPart;
