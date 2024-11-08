@@ -55,6 +55,7 @@ print(getgenv().ReanimSizeLol)
     g2 = Vector3.new(1,1,1),
     g3 = getgenv().ReanimSizeLol
    }
+local Fixing = {}
      local skibdiboo = {
      g = NewPart(Vector3.new(1,1,1), "g", nil, Color3.new(223,199,167)),
      g2 = NewPart(Vector3.new(1,1,1), "g2", nil, Color3.new(223,199,167)),
