@@ -33,6 +33,7 @@ local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z/2 - (g3.Size.Z + g3.Size.Z
       g2 = g2,
             g3 = g3
    }
+table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
       for Name, Child in pairs(fucku) do
          task.spawn(function()
          if Name == "g" then
@@ -46,6 +47,7 @@ local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z/2 - (g3.Size.Z + g3.Size.Z
          end
          end)
          end
+end))
 print(getgenv().ReanimSizeLol)
    print("Yo")
    local Sizes = {
