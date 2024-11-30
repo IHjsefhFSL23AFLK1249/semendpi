@@ -25,7 +25,7 @@ local g3 = Instance.new("Part",v222)
 g3.Name = "g3"
 g3.Anchored = true
 g3.CanCollide = false
-g3.Size = Vector3.new(0.9,1,7)
+g3.Size = getgenv().ReanimSizeLol
 g3.Transparency = 1
 local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z/2 - (g3.Size.Z + g3.Size.Z/2)))
    local fucku = {
@@ -33,7 +33,6 @@ local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z/2 - (g3.Size.Z + g3.Size.Z
       g2 = g2,
             g3 = g3
    }
-      table.insert(getgenv().wizzard, RunService.Heartbeat:connect(function()
       for Name, Child in pairs(fucku) do
          task.spawn(function()
          if Name == "g" then
@@ -47,7 +46,6 @@ local GripPosOffset3 = CFrame.new(0, -0.5, (g3.Size.Z/2 - (g3.Size.Z + g3.Size.Z
          end
          end)
          end
-         end))
 print(getgenv().ReanimSizeLol)
    print("Yo")
    local Sizes = {
